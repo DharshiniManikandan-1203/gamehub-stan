@@ -9,7 +9,18 @@
  * stay clean and don't care whether data comes from local mock or a real backend.
  */
 
-import { MOCK_GAMES, CATEGORIES } from './mockData';
+import gamesData from '../data/games.json';
+
+export const CATEGORIES = [
+  'All',
+  'Action',
+  'Puzzle',
+  'Racing',
+  'RPG',
+  'Sports',
+  'Arcade',
+  'Adventure',
+];
 
 // Simulated network latency (in milliseconds)
 const NETWORK_LATENCY_MS = 400;
@@ -31,7 +42,7 @@ export const fetchGames = async ({ category = 'All', search = '', forceError = f
         return;
       }
 
-      let results = [...MOCK_GAMES];
+      let results = [...gamesData];
 
       // 1. Filter by category
       if (category && category !== 'All') {
@@ -65,7 +76,7 @@ export const fetchGames = async ({ category = 'All', search = '', forceError = f
 export const fetchGameById = async (id) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const game = MOCK_GAMES.find((g) => g.id === id);
+      const game = gamesData.find((g) => g.id === id);
       if (game) {
         resolve(game);
       } else {
