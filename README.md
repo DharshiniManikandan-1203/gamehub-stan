@@ -4,14 +4,6 @@ A mobile application built with **React Native** and **Expo**. GameHub enables u
 
 ---
 
-## Screenshots
-
-| 01. Home Discovery | 02. Added to favourites | 03. Game Details | 04. Saved Favourites |
-|:---:|:---:|:---:|:---:|
-| ![Home](screenshots\home-screen.jpeg) | ![Added to favourites](screenshots\added-to-favourite-page.jpeg) | ![Game Details](screenshots\game-details-screen.jpeg) | ![Favourites](screenshots\favourites-screen.jpeg) |
-
----
-
 ## Versions & Major Libraries
 
 | Library | Version | Purpose |
